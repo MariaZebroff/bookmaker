@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Рейтинг букмекерских контор</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="table-wrapper">
+      <header class="header-wrapper border-outline-main">
+        <h1 class="main-header">Топ букмекерских контор</h1>
+        <nav>
+          <ul class="menu-dot"></ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Tab navigation -->
+        <nav aria-label="Рейтинг вкладки" class="tabs border-outline-main">
+          <ul>
+            <li class="active">
+              <a href="#" data-type="byuser">Народный рейтинг</a>
+            </li>
+            <li>
+              <a href="#" data-type="byeditors"> Рейтинг редакции </a>
+            </li>
+            <li>
+              <a href="#" data-type="bybonus"> Рейтинг по бонусу </a>
+            </li>
+            <li>
+              <a href="#" data-type="bysubrating"> Рейтинг по надежности </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Table/List of bookmakers -->
+        <section aria-label="Список букмекерских контор">
+          <ul class="bookmaker-list" id="bookmaker-list">
+            <!-- <li class="bookmaker-item border-outline-main">
+              <div class="bookmaker-logo-wrapper verified">
+                <img
+                  src="./img/logo-wrapper.svg"
+                  alt="Логотип букмекера"
+                  class="bookmaker-logo"
+                />
+              </div>
+              <a href="#">
+                <div class="stars item-font" aria-label="Рейтинг: 4.7 из 5">
+                  <div class="star-obj fill"></div>
+                  <div class="star-obj fill"></div>
+                  <div class="star-obj fill"></div>
+                  <div class="star-obj"></div>
+                  <div class="star-obj"></div>
+                  <div class="star-rate">4.9</div>
+                </div>
+              </a>
+              <div class="messages item-font">
+                <i></i>
+                <div>325</div>
+              </div>
+
+              <div class="bonuses item-font">
+                <p class="badge excl">Exclusive</p>
+                <div class="bonus-total">
+                  <i></i>
+                  <div>10K ₽</div>
+                </div>
+              </div>
+
+              <div class="button-wrapper">
+                <a href="#" class="internal-link btn">Обзор</a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                  class="external-link btn"
+                  >Сайт</a
+                >
+              </div>
+            </li> -->
+          </ul>
+        </section>
+      </main>
+
+      <footer class="table-footer">
+        <div>
+          <a href="#" class="footer-link pagination">Смотреть дальше</a>
+        </div>
+        <div>
+          <a href="#" class="footer-link info">Как формируется рейтинг?</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
