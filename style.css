@@ -23,11 +23,6 @@ html {
   html {
     font-size: 50%;
   }
-}
-@media only screen and (max-width: 37.5em) {
-  html {
-    font-size: 40%;
-  }
 } */
 
 body {
@@ -36,6 +31,7 @@ body {
   box-sizing: border-box;
   font-weight: 300;
   color: var(--font-color);
+  padding: 2.4rem 2.2rem;
 }
 
 ul {
@@ -52,23 +48,36 @@ a {
   margin: 0 auto;
   border: 1px solid var(--border-color);
   border-radius: 1.6rem;
+  @media only screen and (max-width: 710px) {
+    border-radius: 8px;
+  }
 }
 
 .header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* height: 8.061rem; */
   padding: 5.4rem 3.6rem 2.4rem;
+  @media only screen and (max-width: 710px) {
+    padding: 2rem 2rem 2rem 1.5rem;
+  }
 }
 
 .border-outline-main {
   border-bottom: 1px solid var(--border-color);
 }
 
+.border-outline-main:last-child {
+  @media only screen and (max-width: 710px) {
+    border-bottom: none;
+  }
+}
 .main-header {
   font-size: 2.5rem;
   font-weight: 500;
+  @media only screen and (max-width: 710px) {
+    font-size: 1.8rem;
+  }
 }
 
 .menu-dot {
@@ -83,6 +92,10 @@ a {
 .tabs {
   padding-left: 2.4rem;
   padding-right: 2.4rem;
+
+  @media only screen and (max-width: 710px) {
+    display: none;
+  }
   ul {
     height: 5.5rem;
     display: flex;
@@ -122,6 +135,9 @@ a {
   justify-content: space-between;
   align-items: center;
   height: 6.3rem;
+  @media only screen and (max-width: 710px) {
+    padding: 1.2rem;
+  }
 }
 
 .bookmaker-logo-wrapper {
@@ -129,6 +145,14 @@ a {
   height: 2rem;
   object-fit: cover;
   position: relative;
+  @media only screen and (max-width: 710px) {
+    width: 8rem;
+    height: 1.4rem;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 .bookmaker-logo-wrapper.verified::after {
@@ -143,21 +167,37 @@ a {
   top: 0;
   right: 0;
   transform: translate(40%, -40%);
+  @media only screen and (max-width: 710px) {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
 }
 
 .item-font {
   font-size: 1.5rem;
   font-weight: 500;
+
+  @media only screen and (max-width: 710px) {
+    font-size: 1.2rem;
+  }
 }
 .stars {
   display: flex;
   justify-items: center;
   transition: transform 0.2s ease, background-image 0.3s ease;
   cursor: pointer;
+
+  @media only screen and (max-width: 710px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .star-rate {
   display: inline-block;
   margin-left: 3px;
+  @media only screen and (max-width: 710px) {
+    text-decoration: underline;
+  }
 }
 
 .star-obj {
@@ -171,6 +211,16 @@ a {
 }
 .star-obj.fill {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_466)'%3E%3Cpath d='M7.68334 1.53C7.71255 1.47097 7.75769 1.42129 7.81364 1.38655C7.86959 1.35181 7.93414 1.3334 8.00001 1.3334C8.06587 1.3334 8.13042 1.35181 8.18637 1.38655C8.24232 1.42129 8.28746 1.47097 8.31667 1.53L9.85667 4.64933C9.95812 4.85465 10.1079 5.03227 10.2931 5.16697C10.4783 5.30167 10.6934 5.38941 10.92 5.42267L14.364 5.92667C14.4293 5.93612 14.4906 5.96365 14.541 6.00613C14.5914 6.04862 14.629 6.10437 14.6494 6.16707C14.6697 6.22978 14.6722 6.29694 14.6564 6.36096C14.6406 6.42498 14.6072 6.4833 14.56 6.52933L12.0693 8.95467C11.9051 9.11474 11.7822 9.31232 11.7112 9.53042C11.6403 9.74852 11.6234 9.98059 11.662 10.2067L12.25 13.6333C12.2615 13.6986 12.2545 13.7657 12.2297 13.8271C12.2049 13.8885 12.1633 13.9417 12.1097 13.9807C12.0561 14.0196 11.9927 14.0427 11.9266 14.0473C11.8605 14.0519 11.7945 14.0378 11.736 14.0067L8.65734 12.388C8.45448 12.2815 8.22879 12.2258 7.99967 12.2258C7.77055 12.2258 7.54486 12.2815 7.342 12.388L4.264 14.0067C4.20556 14.0376 4.1396 14.0515 4.07364 14.0468C4.00767 14.0421 3.94435 14.019 3.89087 13.9801C3.83739 13.9412 3.79589 13.8881 3.77111 13.8268C3.74632 13.7655 3.73924 13.6985 3.75067 13.6333L4.338 10.2073C4.3768 9.98116 4.35999 9.74893 4.28903 9.5307C4.21807 9.31246 4.09508 9.11477 3.93067 8.95467L1.44 6.53C1.3924 6.48402 1.35867 6.4256 1.34265 6.36138C1.32663 6.29717 1.32896 6.22975 1.34939 6.16679C1.36982 6.10384 1.40752 6.04789 1.45819 6.00532C1.50886 5.96275 1.57047 5.93527 1.636 5.926L5.07934 5.42267C5.30618 5.38967 5.5216 5.30204 5.70706 5.16733C5.89252 5.03261 6.04247 4.85485 6.144 4.64933L7.68334 1.53Z' fill='%23F3BB44' stroke='%23F3BB44' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_466'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+@media only screen and (max-width: 710px) {
+  .star-obj {
+    display: none; /* Hide all stars */
+  }
+
+  .star-obj:first-child {
+    display: inline-block; /* Show only the first star */
+  }
 }
 
 .stars:hover {
@@ -192,6 +242,10 @@ a {
     height: 1.6rem;
     display: inline-block;
     margin-right: 3px;
+  }
+
+  @media only screen and (max-width: 710px) {
+    display: none;
   }
 }
 
@@ -221,6 +275,10 @@ a {
     padding: 6px 8px;
     border-radius: 30px;
     margin-bottom: 0.5rem;
+    @media only screen and (max-width: 710px) {
+      padding: 4px 6px;
+      font-size: 0.8rem;
+    }
   }
 
   .display-none {
@@ -234,6 +292,11 @@ a {
   .no-bonus {
     color: #c82b32;
     background-color: rgba(200, 43, 50, 0.122);
+    margin-bottom: 0rem !important;
+  }
+
+  .no-bonus + .bonus-total {
+    display: none;
   }
 
   .no-dep {
@@ -250,6 +313,11 @@ a {
   padding: 1.4rem 2.4rem 1.2rem;
   letter-spacing: 0.05rem;
   transition: all 0.2s ease;
+
+  @media only screen and (max-width: 710px) {
+    font-size: 1rem;
+    padding: 1.2rem 1.2rem 1rem 1.2rem;
+  }
 }
 
 .internal-link {
@@ -274,6 +342,10 @@ a {
   justify-content: space-between;
   align-items: center;
   height: 7.1rem;
+
+  @media only screen and (max-width: 710px) {
+    display: none;
+  }
 }
 
 .footer-link {
@@ -303,6 +375,41 @@ a {
 .footer-link.info {
   color: var(--primary-color);
   text-decoration: underline;
+}
+
+.full-rait-link {
+  display: none;
+  @media only screen and (max-width: 710px) {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+
+    div {
+      width: 100;
+      height: 6.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: 500;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+  }
+}
+
+.header-desktop {
+  display: block;
+  @media only screen and (max-width: 710px) {
+    display: none;
+  }
+}
+
+.header-mobile {
+  display: none;
+  @media only screen and (max-width: 710px) {
+    display: block;
+  }
 }
 
 @keyframes pop {

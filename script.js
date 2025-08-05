@@ -84,3 +84,24 @@ fetchTopBK("all").then((data) => {
     })
     .join("");
 });
+
+function setupTabSwitching() {
+  const tabNav = document.querySelector(".tabs.border-outline-main");
+  const tabLinks = tabNav.querySelectorAll("ul li a");
+
+  tabLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      tabLinks.forEach((link) => {
+        link.parentElement.classList.remove("active");
+      });
+
+      e.target.parentElement.classList.add("active");
+
+      const tabType = e.target.dataset.type;
+      console.log("Switched to tab:", tabType);
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", setupTabSwitching);
